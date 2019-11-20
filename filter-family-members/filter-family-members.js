@@ -49,8 +49,15 @@
 // returns ['Beth Jr. Johnson', 'Joshie Wyattson'];
 
 
-
+// The each function will iterate over the element, if the element pass the truth test it will be pushed in the result. 
 var filterFamilyMembers = function (familyTree, truthTest) {
-  // All your code in this function body
-};
+    var result = [];
+    each(familyTree, function(element) {
+      if (truthTest(element)) {
+        result.push(element);
+      }
+    });
+    return result;
+  };
+
 
